@@ -6,12 +6,14 @@ const ModalCreate: React.FC = () => {
 
   const handleOk = () => {
     form.validateFields().then((values) => {
+      const token = localStorage.getItem('token');
       // Kirim data ke API menggunakan fetch atau library lain
-      const apiUrl = 'http://127.0.0.1:8000/api/dokter'; // Ganti dengan URL API yang sesuai
+      const apiUrl = 'http://127.0.0.1:8000/api/auth/dokter'; // Ganti dengan URL API yang sesuai
       fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(values),
       })

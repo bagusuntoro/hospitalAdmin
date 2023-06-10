@@ -33,7 +33,7 @@ const items = [
 
 export default function PasienSelesai()
 {
-  const apiEndpoint = 'http://127.0.0.1:8000/api/pasien-selesai';
+  const apiEndpoint = 'http://127.0.0.1:8000/api/auth/pasien-selesai';
     return(
         <Template>
             <MenuHorizontal items={items} />

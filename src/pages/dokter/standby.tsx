@@ -30,15 +30,13 @@ const items = [
     },
   ];
 
-
-
-export default function DokterIstirahat()
+export default function DokterStandby()
 {
-  const apiEndpoint = 'http://127.0.0.1:8000/api/auth/dokter-istirahat';
+  const apiEndpoint = 'http://127.0.0.1:8000/api/auth/dokter-standby';
     return(
         <Template>
             <MenuHorizontal items={items} />
-            <h1>DOKTER ISTIRAHAT PAGE</h1>
+            <h1>DOKTER STANDBY PAGE</h1>
             <DataDokter apiEndpoint={apiEndpoint} />
         </Template>
     );

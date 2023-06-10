@@ -33,7 +33,7 @@ const items = [
 
 export default function PasienApotek()
 {
-  const apiEndpoint = 'http://127.0.0.1:8000/api/pasien-apotek';
+  const apiEndpoint = 'http://127.0.0.1:8000/api/auth/pasien-apotek';
     return(
         <Template>
             <MenuHorizontal items={items} />

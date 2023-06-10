@@ -1,29 +1,36 @@
-import Template from '../../../components/Layouts/index';
-import MenuHorizontal from '../../../components/menu_horizontal';
-import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/icons';
-import DataDokter from '../../../components/dokter/index';
+import Template from '../../../components/Layouts/index'
+import MenuHorizontal from '../../../components/menu_horizontal'
+import { DatabaseOutlined, RestOutlined, StopOutlined, CheckSquareOutlined } from '@ant-design/icons';
+import DataDokter from '../../../components/dokter/index'
 import ButtonCreate from '../../../components/dokter/buttoncreate';
 
 const items = [
     {
       label: 'Data',
       key: 'data',
-      icon: <MailOutlined />,
+      icon: <DatabaseOutlined />,
       link: '/dokter/data',
+    },
+    {
+      label: 'Standby',
+      key: 'standby',
+      icon: <CheckSquareOutlined />,
+      link: '/dokter/standby',
     },
     {
       label: 'Istirahat',
       key: 'istirahat',
-      icon: <AppstoreOutlined />,
+      icon: <RestOutlined />,
       link: '/dokter/istirahat',
     },
     {
       label: 'Cuti',
       key: 'cuti',
-      icon: <AppstoreOutlined />,
+      icon: <StopOutlined />,
       link: '/dokter/cuti',
     },
   ];
+
   
 
 

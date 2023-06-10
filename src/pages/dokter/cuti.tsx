@@ -1,6 +1,6 @@
 import Template from '../../../components/Layouts/index'
 import MenuHorizontal from '../../../components/menu_horizontal'
-import { DatabaseOutlined, MailOutlined, StopOutlined } from '@ant-design/icons';
+import { DatabaseOutlined, RestOutlined, StopOutlined, CheckSquareOutlined } from '@ant-design/icons';
 import DataDokter from '../../../components/dokter/index'
 
 const items = [
@@ -11,9 +11,15 @@ const items = [
       link: '/dokter/data',
     },
     {
+      label: 'Standby',
+      key: 'standby',
+      icon: <CheckSquareOutlined />,
+      link: '/dokter/standby',
+    },
+    {
       label: 'Istirahat',
       key: 'istirahat',
-      icon: <MailOutlined />,
+      icon: <RestOutlined />,
       link: '/dokter/istirahat',
     },
     {
@@ -26,7 +32,7 @@ const items = [
 
 export default function DokterCuti()
 {
-  const apiEndpoint = 'http://127.0.0.1:8000/api/dokter-cuti';
+  const apiEndpoint = 'http://127.0.0.1:8000/api/auth/dokter-cuti';
     return(
         <Template>
             <MenuHorizontal items={items} />
